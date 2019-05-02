@@ -30,5 +30,5 @@ ADD . .
 RUN npm uninstall node-rdkafka
 RUN npm install node-rdkafka
 ENV LD_LIBRARY_PATH=/usr/src/app/node_modules/node-rdkafka/build/deps
-ENTRYPOINT [ "node", "app.js" ]
-CMD [ "" ]
+#ENTRYPOINT [ "node", "app.js" ]
+#CMD [ "" ]
