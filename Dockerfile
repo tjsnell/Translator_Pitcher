@@ -10,6 +10,7 @@ FROM ubuntu
 RUN  apt-get update -qqy \
   && apt-get install -y --no-install-recommends \
      build-essential \
+     git \
      node-gyp \
      nodejs-dev \
      libssl1.0-dev \
@@ -24,9 +25,10 @@ RUN  apt-get update -qqy \
 
 WORKDIR /usr/src/app
 
-COPY *.js *.json *.md /usr/src/app/
-
-RUN npm install -d
+ADD . .
+#RUN npm install -d
+RUN npm uninstall node-rdkafka
+RUN npm install node-rdkafka
 ENV LD_LIBRARY_PATH=/usr/src/app/node_modules/node-rdkafka/build/deps
 ENTRYPOINT [ "node", "app.js" ]
 CMD [ "" ]
