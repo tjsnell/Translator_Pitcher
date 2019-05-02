@@ -1,0 +1,148 @@
+{
+    "fields": [
+        {
+            "name": "apiEndpoint",
+            "label": "API endpoint",
+            "type": "url",
+            "validation": {
+                "required": true,
+                "string": true
+            },
+            "disabled": false,
+            "placeholder": "API endpoint",
+            "defaultValue": "your-device-to-translate.com",
+            "configKeyPath": "device.apiEndpoint"
+        },
+        {
+            "name": "email",
+            "label": "Email",
+            "type": "email",
+            "validation": {
+                "required": true,
+                "email": true
+            },
+            "disabled": false,
+            "placeholder": "exmaple@email.com",
+            "defaultValue": "",
+            "configKeyPath": "device.credentials.email"
+        },
+        {
+            "name": "password",
+            "label": "Password",
+            "type": "password",
+            "validation": {
+                "required": true,
+                "string": true,
+                "min_length": 10,
+                "max_length": 20,
+                "like": ["REGULAR EXPRESSION HERE", "i"]
+            },
+            "disabled": false,
+            "placeholder": "password",
+            "defaultValue": "",
+            "configKeyPath": "device.credentials.password"
+        },
+        {
+            "name": "serialNum",
+            "label": "Device serial number",
+            "type": "text",
+            "validation": {
+                "required": true,
+                "string": true,
+                "min_length": 6
+            },
+            "disabled": false,
+            "placeholder": "Device serial number",
+            "defaultValue": "",
+            "configKeyPath": "device.credentials.serialNum"
+        },
+
+
+
+        {
+            "name": "selectExample",
+            "label": "Select example",
+            "type": "select",
+            "validation": {
+                "required": true
+            },
+            "disabled": false,
+            "placeholder": "",
+            "defaultValue": "option1",
+            "options": {
+                "option1": {
+                    "disabled": false
+                },
+                "option2": {
+                    "disabled": false
+                },
+                "option3": {
+                    "disabled": false
+                }
+            },
+            "configKeyPath": "..."
+        },
+
+        {
+            "name": "radioExample",
+            "label": "Radio example",
+            "type": "radio",
+            "validation": {
+                "required": true
+            },
+            "disabled": false,
+            "placeholder": "",
+            "defaultValue": "option1",
+            "options": {
+                "option1": {
+                    "disabled": false
+                },
+                "option2": {
+                    "disabled": false
+                },
+                "option3": {
+                    "disabled": false
+                }
+            },
+            "configKeyPath": "..."
+        },
+
+        {
+            "name": "checkboxExample",
+            "label": "Checkbox example",
+            "type": "checkbox",
+            "validation": {
+                "required": true,
+                "one_of": [ true, false ]
+            },
+            "disabled": false,
+            "placeholder": "",
+            "defaultValue": false,
+            "configKeyPath": "..."
+        },
+
+        {
+            "name": "checkboxGroupExample",
+            "label": "Checkbox group example",
+            "type": "checkboxGroup",
+            "validation": {
+                "required": true
+            },
+            "disabled": false,
+            "placeholder": "checkboxGroupExample",
+            "defaultValue": [ "option1", "option3" ],
+            "options": {
+                "option1": {
+                    "disabled": false
+                },
+                "option2": {
+                    "disabled": false
+                },
+                "option3": {
+                    "disabled": false
+                }
+            },
+            "configKeyPath": "..."
+        }
+    ]
+}
